@@ -28,8 +28,6 @@ class Board:
     # Checks board for winner or if there are no more empty spaces
     def check_board(self, p_num):
         if self.is_winner(p_num) or self.is_full():
-            if self.is_full() and not self.is_winner(p_num):
-                print('Draw!')
             return True
         else:
             return False
