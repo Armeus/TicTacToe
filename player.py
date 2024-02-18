@@ -1,3 +1,13 @@
+def game_help():
+    print('\nTo play, the current player needs to input a valid move and hit enter.\nValid moves should be 2 '
+          'characters long. These characters will determine where you symbol (X or O) is placed.\nThe first '
+          'character will determine which row you want to place your symbol ("t" to top row, "m" for middle row, '
+          'and "b" for bottom row).\nThe second character will determine which column you want to place your '
+          'symbol ("r" for right column, "m" for middle column, and "l" for left column).\nFor example: If you '
+          'wanted to place your symbol in the top right corner, you would enter "tr" and hit enter.\nYou cannot '
+          'place your symbol in a space that is already occupied.\n')
+
+
 class Player:
 
     # Creates player and assigns corresponding number and symbol
@@ -14,8 +24,11 @@ class Player:
         move_is_valid = False
         while not move_is_valid:
             player_input = input(f'Player {self.num} please select a move: ').lower()
+            if player_input == 'help':
+                game_help()
+                continue
             # Input should be exactly 2 characters
-            if len(player_input) != 2:
+            elif len(player_input) != 2:
                 print('Move is not valid! Input should be 2 characters')
                 continue
             # Input should have t, m, or b as the first character, and l, m, r as the second character
