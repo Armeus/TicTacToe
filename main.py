@@ -2,6 +2,8 @@
 import board
 import player
 
+print('Welcome to text-based TicTacToe! For information on how to play, type "help" and hit enter.\n')
+
 continue_play = True
 
 while continue_play:
