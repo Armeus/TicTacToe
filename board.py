@@ -15,6 +15,7 @@ class Board:
                     print(f' {self.board[row][column]} \n', end='')
             if row < len(self.board) - 1:
                 print("-----------")
+        print('\n')
 
     # Updates board based on player move
     def update_board(self, move, symbol):
